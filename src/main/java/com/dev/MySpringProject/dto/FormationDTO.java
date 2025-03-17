@@ -1,0 +1,18 @@
+package com.dev.MySpringProject.dto;
+
+import com.dev.MySpringProject.entity.Candidat;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import lombok.Data;
+
+@Data
+@JsonInclude(JsonInclude.Include.NON_NULL)
+public class FormationDTO {
+    private Long id;
+
+    private String ecole;
+    private String diplome;
+    private String anneeScolaire;
+
+    private CandidatDTO candidat;
+
+}
