@@ -10,10 +10,10 @@ import java.util.List;
 
     public class Response {
 
-        private int statusCode; // Code HTTP de la réponse (ex: 200, 404, 500)
-        private String message; // Message descriptif (ex: "Succès", "Erreur de validation")
+        private int statusCode; // Code HTTP de la réponse
+        private String message; // Message descriptif
 
-        // Informations d'authentification
+        // Informationss d'authentification
         private String token; // Token JWT pour l'authentification
         private String role; // Rôle de l'utilisateur (ex: "ADMIN", "CANDIDAT", "RECRUTEUR")
         private String expirationTime; // Date d'expiration du token

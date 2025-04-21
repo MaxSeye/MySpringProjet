@@ -13,7 +13,6 @@ import java.util.List;
 @Data
 @Entity
 @Inheritance(strategy = InheritanceType.JOINED) //En effet, l'héritage en JPA (avec @Inheritance) est déjà une manière de gérer la relation entre Utilisateur et les classes heritiers
-@Table(name = "utilisateur")
 public class Utilisateur implements UserDetails {
 
     @Id
@@ -26,15 +25,45 @@ public class Utilisateur implements UserDetails {
     @NotBlank(message = "password  is required")
     private String password;
 
+    private String prenom;
+
+    private String nom;
+
+    private int numeroDeTelephone;
+
+
     private String role;
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        return List.of(new SimpleGrantedAuthority(role));
+        return List.of(new SimpleGrantedAuthority("ROLE_" + this.role));
     }
-
     public Long getId() {
         return id;
+    }
+
+    public String getPrenom() {
+        return prenom;
+    }
+
+    public void setPrenom(String prenom) {
+        this.prenom = prenom;
+    }
+
+    public String getNom() {
+        return nom;
+    }
+
+    public void setNom(String nom) {
+        this.nom = nom;
+    }
+
+    public int getNumeroDeTelephone() {
+        return numeroDeTelephone;
+    }
+
+    public void setNumeroDeTelephone(int numeroDeTelephone) {
+        this.numeroDeTelephone = numeroDeTelephone;
     }
 
     public void setId(Long id) {

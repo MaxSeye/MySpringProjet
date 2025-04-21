@@ -14,11 +14,15 @@ public class Candidat extends Utilisateur {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String typeFormation;
-    private String niveauEtudes;
-    private String divers;
-    private String langues;
-    private String competences;
+    private String civilite;
+    private String DateDeNaissance;
+    private String pays;
+    private String ville;
+    private String domaineDetude;
+    private String typeDeFormation;
+    private String niveauDetude;
+
+
 
     @ManyToOne
     @JoinColumn(name = "recruteur_id")
@@ -60,44 +64,60 @@ public class Candidat extends Utilisateur {
         this.id = id;
     }
 
-    public String getTypeFormation() {
-        return typeFormation;
+    public String getCivilite() {
+        return civilite;
     }
 
-    public void setTypeFormation(String typeFormation) {
-        this.typeFormation = typeFormation;
+    public void setCivilite(String civilite) {
+        this.civilite = civilite;
     }
 
-    public String getNiveauEtudes() {
-        return niveauEtudes;
+    public String getDateDeNaissance() {
+        return DateDeNaissance;
     }
 
-    public void setNiveauEtudes(String niveauEtudes) {
-        this.niveauEtudes = niveauEtudes;
+    public void setDateDeNaissance(String dateDeNaissance) {
+        DateDeNaissance = dateDeNaissance;
     }
 
-    public String getDivers() {
-        return divers;
+    public String getPays() {
+        return pays;
     }
 
-    public void setDivers(String divers) {
-        this.divers = divers;
+    public void setPays(String pays) {
+        this.pays = pays;
     }
 
-    public String getLangues() {
-        return langues;
+    public String getVille() {
+        return ville;
     }
 
-    public void setLangues(String langues) {
-        this.langues = langues;
+    public void setVille(String ville) {
+        this.ville = ville;
     }
 
-    public String getCompetences() {
-        return competences;
+    public String getDomaineDetude() {
+        return domaineDetude;
     }
 
-    public void setCompetences(String competences) {
-        this.competences = competences;
+    public void setDomaineDetude(String domaineDetude) {
+        this.domaineDetude = domaineDetude;
+    }
+
+    public String getTypeDeFormation() {
+        return typeDeFormation;
+    }
+
+    public void setTypeDeFormation(String typeDeFormation) {
+        this.typeDeFormation = typeDeFormation;
+    }
+
+    public String getNiveauDetude() {
+        return niveauDetude;
+    }
+
+    public void setNiveauDetude(String niveauDetude) {
+        this.niveauDetude = niveauDetude;
     }
 
     public Recruteur getRecruteur() {

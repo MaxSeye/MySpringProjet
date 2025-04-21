@@ -21,7 +21,7 @@ public class OffreEmploi {
     private String contrat;
     private String autres;
 
-    @ManyToMany(mappedBy = "offreEmploi") // La relation est gérée par Candidat
+    @ManyToMany(mappedBy = "offresEmploi") // La relation est gérée par Candidat
     private List<Candidat> candidats;
 
     @ManyToOne

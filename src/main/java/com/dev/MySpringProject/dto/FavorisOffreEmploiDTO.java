@@ -13,4 +13,19 @@ public class FavorisOffreEmploiDTO {
 
     private List<CandidatDTO> candidats;
 
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public List<CandidatDTO> getCandidats() {
+        return candidats;
+    }
+
+    public void setCandidats(List<CandidatDTO> candidats) {
+        this.candidats = candidats;
+    }
 }

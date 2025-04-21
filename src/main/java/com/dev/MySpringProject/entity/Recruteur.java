@@ -14,8 +14,14 @@ public class Recruteur extends Utilisateur{
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    private String civilite;
+    private String nomDeLaSociete;
+    private String dateDeCreation;
+    private String pays;
+    private String ville;
     private String formeJuridique;
-    private String domaineActivite;
+    private String typSociete;
+    private String domainActivite;
 
 
     @OneToMany(mappedBy = "recruteur")
@@ -35,6 +41,32 @@ public class Recruteur extends Utilisateur{
         this.id = id;
     }
 
+    public String getCivilite() {
+        return civilite;
+    }
+
+    public void setCivilite(String civilite) {
+        this.civilite = civilite;
+    }
+
+
+
+    public String getPays() {
+        return pays;
+    }
+
+    public void setPays(String pays) {
+        this.pays = pays;
+    }
+
+    public String getVille() {
+        return ville;
+    }
+
+    public void setVille(String ville) {
+        this.ville = ville;
+    }
+
     public String getFormeJuridique() {
         return formeJuridique;
     }
@@ -43,12 +75,36 @@ public class Recruteur extends Utilisateur{
         this.formeJuridique = formeJuridique;
     }
 
-    public String getDomaineActivite() {
-        return domaineActivite;
+    public String getNomDeLaSociete() {
+        return nomDeLaSociete;
     }
 
-    public void setDomaineActivite(String domaineActivite) {
-        this.domaineActivite = domaineActivite;
+    public void setNomDeLaSociete(String nomDeLaSociete) {
+        this.nomDeLaSociete = nomDeLaSociete;
+    }
+
+    public String getDateDeCreation() {
+        return dateDeCreation;
+    }
+
+    public void setDateDeCreation(String dateDeCreation) {
+        this.dateDeCreation = dateDeCreation;
+    }
+
+    public String getTypSociete() {
+        return typSociete;
+    }
+
+    public void setTypSociete(String typSociete) {
+        this.typSociete = typSociete;
+    }
+
+    public String getDomainActivite() {
+        return domainActivite;
+    }
+
+    public void setDomainActivite(String domainActivite) {
+        this.domainActivite = domainActivite;
     }
 
     public List<Candidat> getCandidats() {
